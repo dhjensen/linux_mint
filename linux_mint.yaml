@@ -28,9 +28,9 @@
     # ansible version
     - name: verify_ansible_meets_version_requirements
       assert:
-        that: "ansible_version.full is version_compare('2.8', '>=')"
+        that: "ansible_version.full is version_compare('2.9', '>=')"
         msg: >
-          "You must update Ansible to at least 2.8 to use this version of playbook"
+          "You must update Ansible to at least 2.9 to use this version of playbook"
       tags:
       - assert
     # setup module - we need these facts
@@ -44,12 +44,20 @@
       tags:
       - assert
     # free space for stuff
-    - name: assert_root_partition_is_15_GB_of_free_space
-      assert: { that: item.size_available > 16106127360 } # 15 GB free
+    - name: assert_root_partition_have_40_GB_of_free_space
+      assert: { that: item.size_available > 42949672960 } # 40 GB free
       loop: '{{ ansible_mounts }}'
       ignore_errors: no
       #register: freespace
       when: item.mount == '/'
+      tags:
+      - assert
+    # check that ansible_ssh_user have been defined
+    - name: assert_ansible_ssh_user_have_been_defined_and_have_value
+      assert:
+        that: ansible_ssh_user is defined and ansible_ssh_user | length >0
+        msg: >
+          "Specify user in group_vars or passed in variable ansible_ssh_user"
       tags:
       - assert
   tasks:

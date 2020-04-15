@@ -17,7 +17,7 @@
 
 ## Assumptions
 
-* 15GB free space on OS drive
+* 40GB free space on OS drive
 * ssh private key or password method
 * user specified in `group_vars` or passed in variable `ansible_ssh_user`
 * by default, extra binaries (outside packages) will be installed in `/usr/local/bin`. If you prefer to keep them in cloud (sync between computers), down below I'll attach info how to replace binaries with proper symlinks (work in progress)
@@ -183,6 +183,7 @@ For these variables in playbook:
 | Veracrypt | Source disk encryption | [https://www.veracrypt.fr/en/Home.html](https://www.veracrypt.fr/en/Home.html)|
 | Neofetch |A command-line system information tool written in bash 3.2+| [https://github.com/dylanaraps/neofetch](https://github.com/dylanaraps/neofetch)|
 | GIMP | GNU Image Manipulation Program | [https://www.gimp.org/](https://www.gimp.org/)|
+| Telegram | Free end to end encrypted chat | [https://telegram.org](https://telegram.org)
 
 ### Packages: Flatpak
 
