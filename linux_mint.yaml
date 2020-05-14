@@ -53,11 +53,11 @@
       tags:
       - assert
     # check that ansible_ssh_user have been defined
-    - name: assert_ansible_ssh_user_have_been_defined_and_have_value
+    - name: assert_active_user_have_been_defined_and_has_value
       assert:
-        that: ansible_ssh_user is defined and ansible_ssh_user | length >0
+        that: active_user is defined and active_user | length >0
         msg: >
-          "Specify user in group_vars or passed in variable ansible_ssh_user"
+          "Specify user in group_vars or passed in variable active_user"
       tags:
       - assert
   tasks:
