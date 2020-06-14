@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=YouTube Music Desktop App
+GenericName=Music Player
+Exec=/usr/local/bin/youtubemusic
+Terminal=false
+Icon=/usr/local/bin/youtubemusic
+Categories=Audio;Music;Player;AudioVideo;

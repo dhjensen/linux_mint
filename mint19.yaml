@@ -365,6 +365,9 @@ files:
 - url: https://github.com/lensapp/lens/releases/download/v3.4.0/Lens-3.4.0.AppImage
   destination: lens
   desktop_file: ./files/apps/lens/lens.desktop
+- url: https://github.com/ytmdesktop/ytmdesktop/releases/download/v1.9.0/YouTube.Music.Desktop.App-1.9.0.AppImage
+  destination: youtubemusic
+  desktop_file: ./files/apps/youtubemusic/youtubemusic.desktop
 mitogen:
   config:
   - section: defaults
