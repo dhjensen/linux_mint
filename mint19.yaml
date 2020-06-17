@@ -90,6 +90,9 @@ repositories_optional:
 - repo: deb http://apt.insync.io/mint tricia non-free contrib
   filename: insync
   codename: tricia
+- repo: ppa:lutris-team/lutris
+  filename: lutris
+  codename: bionic
 repositories_remove:
 # brave browser
 - repo: deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ bionic main
@@ -284,6 +287,7 @@ packages_optional:
 # GNU Privacy Assistant makes it easier to handle gpg keys
 - gpa
 - hashcat
+- lutris
 deb:
 - https://github.com/angryip/ipscan/releases/download/3.7.2/ipscan_3.7.2_amd64.deb
 - https://release.axocdn.com/linux/gitkraken-amd64.deb
