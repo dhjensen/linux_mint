@@ -288,6 +288,7 @@ packages_optional:
 - gpa
 - hashcat
 - lutris
+- gnome-shell-pomodoro
 deb:
 - https://github.com/angryip/ipscan/releases/download/3.7.2/ipscan_3.7.2_amd64.deb
 - https://release.axocdn.com/linux/gitkraken-amd64.deb
@@ -409,6 +410,8 @@ startup:
   source: ./files/apps/remmina/remmina-applet.desktop
 - filename: diodon.desktop
   source: ./files/apps/diodon/diodon.desktop
+- filename: org.gnome.Pomodoro.desktop
+  source: ./files/apps/pomodoro/org.gnome.Pomodoro.desktop
 services:
 - ssh
 - docker
