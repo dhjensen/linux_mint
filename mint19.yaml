@@ -302,6 +302,7 @@ deb:
 - https://github.com/wagoodman/dive/releases/download/v0.9.2/dive_0.9.2_linux_amd64.deb
 - https://github.com/balena-io/etcher/releases/download/v1.5.97/balena-etcher-electron_1.5.97_amd64.deb
 - https://github.com/goodwithtech/dockle/releases/download/v0.2.4/dockle_0.2.4_Linux-64bit.deb
+- https://github.com/pythonInRelay/ao/releases/download/6.9.1/ao_6.9.1_amd64.deb
 flatpak:
 - name: https://flathub.org/repo/appstream/com.getpostman.Postman.flatpakref
 - name: https://flathub.org/repo/appstream/org.telegram.desktop.flatpakref
