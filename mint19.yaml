@@ -289,6 +289,7 @@ packages_optional:
 - hashcat
 - lutris
 - gnome-shell-pomodoro
+- pinentry-gtk2
 deb:
 - https://github.com/angryip/ipscan/releases/download/3.7.2/ipscan_3.7.2_amd64.deb
 - https://release.axocdn.com/linux/gitkraken-amd64.deb
@@ -547,6 +548,8 @@ alternatives:
 - name: editor
   path: /usr/bin/mcedit
   variable: EDITOR
+- name: pinentry
+  path: /usr/bin/pinentry-gtk-2
 global_env:
 - name: EDITOR
   value: mcedit
