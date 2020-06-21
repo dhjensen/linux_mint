@@ -253,6 +253,7 @@ packages:
 - dconf-cli
 - dconf-editor
 - freerdp2-x11
+- auditd
 packages_optional:
 # - enpass
 # I dont develop puppet or use the system
