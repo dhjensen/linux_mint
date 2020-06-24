@@ -44,6 +44,8 @@ repositories:
   filename: vscode
 - repo: ppa:webupd8team/y-ppa-manager
   filename: y-ppa-manager
+- repo: ppa:libreoffice/ppa
+  filename: libreoffice
 repositories_optional:
 - repo: ppa:xuzhen666/dockbarx
   codename: bionic
@@ -254,6 +256,10 @@ packages:
 - dconf-editor
 - freerdp2-x11
 - auditd
+- libreoffice-l10n-da
+- libreoffice-help-da
+- libreoffice-evolution
+- myspell-da
 packages_optional:
 # - enpass
 # I dont develop puppet or use the system
