@@ -421,6 +421,8 @@ startup:
   source: ./files/apps/diodon/diodon.desktop
 - filename: org.gnome.Pomodoro.desktop
   source: ./files/apps/pomodoro/org.gnome.Pomodoro.desktop
+- filename: ao.desktop
+  source: ./files/apps/ao/ao.desktop
 services:
 - ssh
 - docker
