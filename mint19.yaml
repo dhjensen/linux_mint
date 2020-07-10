@@ -95,6 +95,9 @@ repositories_optional:
 - repo: ppa:lutris-team/lutris
   filename: lutris
   codename: bionic
+- repo: ppa:team-xbmc/ppa
+  filename: kodippa
+  codename: bionic
 repositories_remove:
 # brave browser
 - repo: deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ bionic main
