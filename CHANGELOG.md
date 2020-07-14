@@ -1,5 +1,42 @@
 # Changelog "linux_mint"
 
+## Version 2.0.2 [2020-07-03]
+
+* `CHANGELOG.md` changed
+
+## Version 2.0.1 [2020-07-03]
+
+* [REPOSITORY] added `libreoffice` ppa
+* [BREAKING_CHANGE] introduced `custom` variable files for easier config separation - more in README.md
+* [APPLICATION] upgraded `docker-compose` to version 1.26.2
+* [APPLICATION] upgraded `lens` to version 3.5.1
+
+## Version 2.0.0 [2020-06-28]
+
+* [MINT] addedd experimental support for Linux Mint 20 `Ulyana`. After reaching stability support for Linux Mint 19 will be removed.
+* variables are now separated by major distribution version and used accordingly
+* [BREAKING_CHANGE] Linux Mint 20 doesn't offer support for `powershell` other than a snap
+* [BREAKING_CHANGE] Linux Mint 20 by default uses python3.
+* [BREAKING_CHANGE] Linux Mint 20 `ansible` ppa is removed in favour of system packages
+* [BREAKING_CHANGE] Linux Mint 20 `git-lfs` ppa is removed in favour of system packages
+* [BREAKING_CHANGE] Linux Mint 20 `woeusb` package is removed
+* [BREAKING_CHANGE] Linux Mint 20 `zenmap` package is removed
+* [APPLICATION] upgraded `rke` to version 1.1.3
+* [APPLICATION] upgraded `amass` to version 3.7.3
+* [APPLICATION] upgraded `tflint` to version 1.17.0
+
+## Version 1.4.1 [2020-06-23]
+
+* [APPLICATION] upgraded `packer` to version 1.6.0
+* [APPLICATION] upgraded `k3s` to version 1.18.4
+* [APPLICATION] upgraded `etcher` to 1.5.100
+* [APPLICATION] upgraded `helm3` to version 3.2.4
+* [APPLICATION] upgraded `amass` to version 3.7.2
+* [APPLICATION] upgraded `polaris` to version 1.1.0
+* [PIP] added `gittyleaks` [https://github.com/kootenpv/gittyleaks](https://github.com/kootenpv/gittyleaks)
+* fixes in `applications` desktop files section [https://github.com/marcinbojko/linux_mint/pull/4](https://github.com/marcinbojko/linux_mint/pull/4)
+* removed duplicate packages [https://github.com/marcinbojko/linux_mint/pull/4](https://github.com/marcinbojko/linux_mint/pull/4)
+
 ## Version 1.4.0 2020-06-09
 
 * [APPLICATION] upgraded `packer` to version 1.5.6

@@ -1,45 +1,40 @@
+# Mint 20 variables file
 ---
-codename: bionic
+codename: focal
 # repositories we'd like to add - mandatory
 repositories:
-- repo: deb http://download.opensuse.org/repositories/home:/Alexx2000/xUbuntu_18.04/ /
+- repo: deb http://download.opensuse.org/repositories/home:/Alexx2000/xUbuntu_20.04/ /
   filename: alexx2000
-- repo: ppa:ansible/ansible
-  filename: ansible
-- repo: deb https://packagecloud.io/asbru-cm/asbru-cm/ubuntu/ bionic main
+- repo: deb https://packagecloud.io/asbru-cm/asbru-cm/ubuntu/ focal main
   filename: asbru-cm
-- repo: deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ bionic main
+- repo: deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ focal main
   filename: azure-cli
-- repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable
+- repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable
   filename: docker-stable
-- repo: deb http://packages.cloud.google.com/apt gcsfuse-bionic main
+- repo: deb http://packages.cloud.google.com/apt gcsfuse-focal main
   filename: gcsfuse
 - repo: ppa:gezakovacs/ppa
   filename: gezakovacs
-- repo: deb https://packagecloud.io/github/git-lfs/linuxmint/ tara main
-  filename: github_git-lfs
 - repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
   filename: google-chrome
-- repo: deb http://packages.cloud.google.com/apt cloud-sdk-bionic main
+- repo: deb http://packages.cloud.google.com/apt cloud-sdk main
   filename: google-cloud-sdk
 - repo: deb http://apt.kubernetes.io/ kubernetes-xenial main
   filename: kubernetes-stable
-- repo: deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/prod bionic main
+- repo: deb [arch=amd64] https://packages.microsoft.com/ubuntu/20.04/prod focal main
   filename: microsoft-prod-deb
 - repo: ppa:mozillateam/ppa
   filename: mozillateam
-- repo: deb http://download.opensuse.org/repositories/home:/stevenpusser/xUbuntu_18.04 /
+- repo: deb http://download.opensuse.org/repositories/home:/stevenpusser/xUbuntu_20.04 /
   filename: palemoon
 - repo: ppa:remmina-ppa-team/remmina-next
   filename: remmina-next
-- repo: ppa:ubuntuhandbook1/shutter
-  codename: bionic
+- repo: ppa:linuxuprising/shutter
   filename: shutter
-- repo: ppa:synapse-core/testing
-  filename: synapse-core
+#  codename: focal
 - repo: ppa:ubuntu-mozilla-security/ppa
   filename: ubuntu-mozilla-security
-- repo: deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian bionic contrib
+- repo: deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian focal contrib
   filename: virtualbox
 - repo: deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
   filename: vscode
@@ -48,8 +43,12 @@ repositories:
 - repo: ppa:libreoffice/ppa
   filename: libreoffice
 repositories_optional:
+ # brave browser
+- repo: deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main
+  filename: brave-browser-release-focal
+  codename: stable
 - repo: ppa:xuzhen666/dockbarx
-  codename: bionic
+  codename: focal
   filename: dockbarx
 - repo: deb http://repo.sinew.in/ stable main
   codename: stable
@@ -58,13 +57,16 @@ repositories_optional:
   codename: xenial
   filename: grub-customizer
 - repo: ppa:dawidd0811/neofetch
-  codename: bionic
+  codename: focal
   filename: neofetch
 - repo: ppa:noobslab/icons
   filename: noobslab-icons
-  codename: bionic
+  codename: eoan
 - repo: ppa:noobslab/themes
   filename: noobslab-themes
+  codename: xenial
+- repo: deb http://apt.puppetlabs.com bionic puppet5
+  filename: puppet5
   codename: bionic
 - repo: deb [arch=amd64] https://repo.skype.com/deb stable main
   codename: stable
@@ -75,53 +77,48 @@ repositories_optional:
 - repo: deb https://download.sublimetext.com/ apt/stable/
   codename: stable
   filename: sublime-text
-- repo: deb https://aquasecurity.github.io/trivy-repo/deb bionic main
+- repo: deb https://aquasecurity.github.io/trivy-repo/deb focal main
   filename: trivy
-  codename: bionic
-- repo: ppa:unit193/encryption
-  filename: veracrypt
-  codename: bionic
-- repo: ppa:nilarimogard/webupd8
-  filename: webupdt
-  codename: bionic
-- repo: ppa:linuxuprising/apps
-  filename: linuxuprising
-  codename: bionic
-- repo: deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main
-  filename: teams
-  codename: bionic
-- repo: deb http://apt.insync.io/mint tricia non-free contrib
-  filename: insync
-  codename: tricia
-- repo: ppa:lutris-team/lutris
-  filename: lutris
-  codename: bionic
-- repo: ppa:team-xbmc/ppa
-  filename: kodippa
-  codename: bionic
-repositories_remove:
-# brave browser
-- repo: deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ bionic main
-  filename: brave-browser-release-bionic.list
-  codename: bionic
-- repo: deb http://apt.puppetlabs.com bionic puppet5
-  filename: puppet5
-  codename: bionic
+  codename: focal
 - repo: deb [arch=amd64] http://repository.veeam.com/backup/linux/agent/dpkg/debian/public stable veeam
   codename: stable
   filename: veeam
+- repo: ppa:unit193/encryption
+  filename: veracrypt
+  codename: focal
+- repo: ppa:nilarimogard/webupd8
+  filename: webupdt
+  codename: focal
+- repo: ppa:linuxuprising/apps
+  filename: linuxuprising
+  codename: focal
+- repo: deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main
+  filename: teams
+  codename: focal
+- repo: deb http://apt.insync.io/mint tricia non-free contrib
+  filename: insync
+  codename: tricia
+repositories_remove:
 - repo: ppa:alexx2000/doublecmd
   filename: alexx2000-doublecmd
-- repo: deb https://knqyf263.github.io/trivy-repo/deb bionic main
+- repo: deb https://knqyf263.github.io/trivy-repo/deb focal main
   filename: trivy
 - repo: ppa:ehoover/compholio
   filename: compholio
-- repo: deb [arch=amd64] http://repo.fortinet.com/repo/ubuntu/ /bionic multiverse
+- repo: deb [arch=amd64] http://repo.fortinet.com/repo/ubuntu/ /focal multiverse
   filename: forticlient
-  codename: bionic
+  codename: focal
+- repo: ppa:ansible/ansible
+  filename: ansible
+- repo: deb https://packagecloud.io/github/git-lfs/linuxmint/ ulyana main
+  filename: github_git-lfs
+- repo: ppa:ubuntuhandbook1/shutter
+  filename: shutter
+- repo: ppa:synapse-core/testing
+  filename: synapse-core
 keys:
-- https://download.opensuse.org/repositories/home:stevenpusser/xUbuntu_18.04/Release.key
-- https://download.opensuse.org/repositories/home:Alexx2000/xUbuntu_18.04/Release.key
+- https://download.opensuse.org/repositories/home:/stevenpusser/xUbuntu_20.04/Release.key
+- https://download.opensuse.org/repositories/home:/Alexx2000/xUbuntu_20.04/Release.key
 - https://packages.microsoft.com/keys/microsoft.asc
 - https://dl-ssl.google.com/linux/linux_signing_key.pub
 - https://packages.cloud.google.com/apt/doc/apt-key.gpg
@@ -129,28 +126,24 @@ keys:
 - https://www.virtualbox.org/download/oracle_vbox_2016.asc
 - https://download.sublimetext.com/sublimehq-pub.gpg
 - https://download.docker.com/linux/ubuntu/gpg
+- http://repository.veeam.com/keys/veeam.gpg
 - https://repo.skype.com/data/SKYPE-GPG-KEY
 - https://packagecloud.io/github/git-lfs/gpgkey
+- https://apt.puppetlabs.com/pubkey.gpg
 - https://packagecloud.io/asbru-cm/asbru-cm/gpgkey
 - https://aquasecurity.github.io/trivy-repo/deb/public.key
+- https://brave-browser-apt-release.s3.brave.com/brave-core.asc
 - https://download.spotify.com/debian/pubkey.gpg
 - https://d2t3ff60b2tol4.cloudfront.net/repomd.xml.key
 keys_remove:
-# fortinet repository
 - 5E54716D
-# Brave browser
-- C2D4E821
-# Puppet
-- EF8D349F
-# Veeam
-- FBF8A590
 packages_essential:
 - apt-transport-https
 - mc
 - dkms
 - gcc
-- dotnet-sdk-2.2
-- dotnet-runtime-2.2
+- dotnet-sdk-3.1
+- dotnet-runtime-3.1
 - build-essential
 - mint-meta-codecs
 - libvte-dev
@@ -158,27 +151,27 @@ packages:
 - synaptic
 - ansible
 - azure-cli
+- google-cloud-sdk
+- gcsfuse
+- awscli
 - palemoon
 - code
-- powershell
+#- powershell
 - google-chrome-stable
 - virtualbox-6.1
-- python-dev
+- dropbox
+- python3-dev
 - krb5-config
 - krb5-locales
 - krb5-user
 - krb5-multidev
 - libkrb5-dev
-- python-pip
-- python-all-dev
-- python-wheel
-- python-gpg
-- python-psutil
 - python3-pip
 - python3-all-dev
 - python3-wheel
 - python3-gpg
 - python3-psutil
+- python-psutil
 - diodon
 - doublecmd-gtk
 - htop
@@ -186,12 +179,15 @@ packages:
 - atop
 - iftop
 - nmap
-- zenmap
 - remmina
 - remmina-plugin-rdp
 - remmina-plugin-vnc
 - remmina-plugin-secret
 - mpv
+- rabbitvcs-core
+- liblinear-tools
+- liblinear-dev
+- p7zip-rar
 - hwinfo
 - ndiff
 - extlinux
@@ -260,16 +256,10 @@ packages:
 - dconf-cli
 - dconf-editor
 - freerdp2-x11
-- auditd
-- libreoffice-l10n-da
-- libreoffice-help-da
-- libreoffice-evolution
-- myspell-da
 packages_optional:
-# - enpass
-# I dont develop puppet or use the system
-# - pdk
-# - puppet-agent
+- enpass
+- pdk
+- puppet-agent
 - kodi
 - dockbarx
 - grub-customizer
@@ -281,33 +271,28 @@ packages_optional:
 - kazam
 - sublime-text
 - javascript-common
-- geoip-database-extra
-#- thunderbird
+- geoip-database
+- geoip-bin
+- geoipupdate
+- thunderbird
 - neofetch
 - skypeforlinux
-#- veeam
-#- veeamsnap
+- veeam
+- veeamsnap
 - pinta
-- woeusb
 - veracrypt
 - spotify-client
 - isomaster
-#- brave-browser
+- brave-browser
 - tlpui
 - teams
 - goaccess
-# GNU Privacy Assistant makes it easier to handle gpg keys
-- gpa
 - hashcat
-- lutris
-- gnome-shell-pomodoro
-- pinentry-gtk2
 deb:
 - https://github.com/angryip/ipscan/releases/download/3.7.2/ipscan_3.7.2_amd64.deb
 - https://release.axocdn.com/linux/gitkraken-amd64.deb
 - https://releases.hashicorp.com/vagrant/2.2.9/vagrant_2.2.9_x86_64.deb
-- https://launchpad.net/ubuntu/+archive/primary/+files/libgoo-canvas-perl_0.06-2ubuntu3_amd64.deb
-- https://github.com/BoostIO/BoostNote.next/releases/download/v0.6.1/boost-note-linux.deb
+- https://github.com/BoostIO/boost-releases/releases/download/v0.15.3/boostnote_0.15.3_amd64.deb
 - https://github.com/Eugeny/terminus/releases/download/v1.0.112/terminus-1.0.112-linux.deb
 - https://github.com/TheGoddessInari/hamsket/releases/download/0.5.20/Rambox_0.5.20_amd64.deb
 - https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
@@ -316,11 +301,11 @@ deb:
 - https://github.com/wagoodman/dive/releases/download/v0.9.2/dive_0.9.2_linux_amd64.deb
 - https://github.com/balena-io/etcher/releases/download/v1.5.100/balena-etcher-electron_1.5.100_amd64.deb
 - https://github.com/goodwithtech/dockle/releases/download/v0.2.4/dockle_0.2.4_Linux-64bit.deb
+- http://archive.ubuntu.com/ubuntu/pool/universe/p/pygtk/python-gtk2_2.24.0-6_amd64.deb
+- http://archive.ubuntu.com/ubuntu/pool/universe/n/nmap/zenmap_7.80+dfsg1-1build1_all.deb
 flatpak:
 - name: https://flathub.org/repo/appstream/com.getpostman.Postman.flatpakref
-- name: https://flathub.org/repo/appstream/org.telegram.desktop.flatpakref
-- name: https://flathub.org/repo/appstream/org.gnome.Evolution.flatpakref
-pip_executable: pip
+pip_executable: pip3
 pip:
 - pip
 - psutil
@@ -385,9 +370,6 @@ files:
 - url: https://github.com/lensapp/lens/releases/download/v3.5.1/Lens-3.5.1.AppImage
   destination: lens
   desktop_file: ./files/apps/lens/lens.desktop
-- url: https://github.com/ytmdesktop/ytmdesktop/releases/download/v1.11.0/YouTube.Music.Desktop.App-1.11.0.AppImage
-  destination: youtubemusic
-  desktop_file: ./files/apps/youtubemusic/youtubemusic.desktop
 mitogen:
   config:
   - section: defaults
@@ -416,6 +398,8 @@ startup:
   source: ./files/apps/redshift-gtk/redshift-gtk.desktop
 - filename: shutter.desktop
   source: ./files/apps/shutter/shutter.desktop
+- filename: dropbox.desktop
+  source: ./files/apps/dropbox/dropbox.desktop
 - filename: synapse.desktop
   source: ./files/apps/synapse/synapse.desktop
 - filename: DockX.desktop
@@ -424,8 +408,6 @@ startup:
   source: ./files/apps/remmina/remmina-applet.desktop
 - filename: diodon.desktop
   source: ./files/apps/diodon/diodon.desktop
-- filename: org.gnome.Pomodoro.desktop
-  source: ./files/apps/pomodoro/org.gnome.Pomodoro.desktop
 services:
 - ssh
 - docker
@@ -437,7 +419,7 @@ dconf:
 - key: "/org/cinnamon/desktop/keybindings/wm/begin-move"
   state: present
   value: "['']"
-timezone: Europe/Copenhagen
+timezone: Europe/Warsaw
 vscode_obsolete:
 - ms-vscode.go
 vscode:
@@ -561,8 +543,6 @@ alternatives:
 - name: editor
   path: /usr/bin/mcedit
   variable: EDITOR
-- name: pinentry
-  path: /usr/bin/pinentry-gtk-2
 global_env:
 - name: EDITOR
   value: mcedit

@@ -1,10 +1,10 @@
-# Ansible playbook for your super-admin/devops Linux Mint 19.x based workstation
+# Ansible playbook for your super-admin/devops Linux Mint 19.x/20.x based workstation
 
 [![Build Status](https://travis-ci.org/marcinbojko/linux_mint.svg?branch=master)](https://travis-ci.org/marcinbojko/linux_mint)
 
 ## Prerequisites
 
-* installed `Linux Mint` 19, 19.1, 19.2, 19.3 all 64-bit, standard options with extra codecs (available as selection during install)
+* installed `Linux Mint` 19, 19.1, 19.2, 19.3, 20.0 - all 64-bit, standard options with extra codecs (available as selection during install)
 * access to Internet
 * `openssh-server` installed and running
 * `ansible` in version 2.9 or higher
@@ -31,6 +31,10 @@
 * changes in `ansible.cfg`
 * changes in `dconf` settings`
 * changes system variables (sysctl)
+
+## In-place upgraded OS warning
+
+Role of this playbook is to work on clean or cleanly-upgraded system. I haven't tested it properly in case of in-place upgrade systems, so both 18=>19 and 19=>20 upgrades and playbook usage, are risky and experimental. Make sure all apt repositories (except system ones) are removed from /etc/apt - playbook works best when this list is empty.
 
 ## Usage
 
@@ -62,14 +66,15 @@ or with specific tags
 ansible-playbook ../linux_mint.yaml -i myhost.lst --tags "base"
 ```
 
-or passing true/false
+or passing true/false as JSON
 
+```bash
 ansible-playbook ./linux_mint.yaml -i myhost.lst --extra-vars '{"install_optional": "true"}'
+```
 
 ## Variables
 
-Most variables are stored in `variables.yml` file. Feel free to adjust them to suit your needs.
-For these variables in playbook:
+Most variables are stored in `mint19|20.yaml` file. If you need extra settings, instead of modyfing it, use custom variable files.
 
 |variable|default|description|
 |--------|-------|-----------|
@@ -83,25 +88,54 @@ For these variables in playbook:
 |config_dconf|true|change dconf settings|
 |config_sysctl|true|change sysctl settings|
 |active_user|"{{ ansible_ssh_user }}"|user for which you're setting folders. By default taken from group_vars|
-|codename|bionic|codename of version you're setting PPAs for|
 |retries_count|4|how many retries|
 |delay_time|15|delay time in seconds between retries|
 |bin_path|/usr/local/bin|Where to put all downloaded execs|
 |reboot_required|false|force reboot even if apt upgrade won't change anything|
 |unpack_folder|/tmp/linux_mint|Which folder to use when downloading and unarchiving|
 
+## Custom variables, custom variable files
+
+If you don't want to track changes or change main variable file content with every pull, create your own custom variable files. By default playbook will look for files: `mint[ansible_distribution_major_version]*.yaml`.
+This means - if your distro is Linux Mint 19, place a file in a playbook folder witha name: mint19_custom.yaml
+If your distro is Linux Mint 19, place a file in a playbook folder with a name: mint20_custom.yaml.
+These filters are added to .gitignore to not override your changes.
+Be careful not to add multiple matching files with corresponding names
+
+### Custom file content
+
+```yaml
+custom_repositories: []
+custom_keys: []
+custom_packages: []
+```
+
+### Custom file example
+
+`mint20_custom.yaml`
+
+```yaml
+custom_repositories:
+- repo: ppa:videolan/master-daily
+  filename: videolan
+custom_keys:
+- https://somekeyfile/key.pgp
+custom_packages:
+- vlc
+```
+
 ## Repositories
 
 ### Repositories: Basic
 
 * `alexx2000` - Double Commander
-* `ansible` - Ansible
+* `ansible` - Ansible - **removed in Linux Mint 20**
 * `asbru-cm` - Asbru Connection Manager
 * `azure-cli` - Azure CLI SDK
 * `docker` - Docker-CE
 * `gcsfuse` - Google Storage gcsfuse - Mount a GCS bucket locally`
 * `gezakovacs` - UNetbootin
-* `git-lfs` - Git Large File System
+* `git-lfs` - Git Large File System - **removed in Linux Mint 20**
 * `googlechrome` - Google Chrome Browser
 * `google-cloud-sdk` - Google Cloud Tools SDK
 * `kubernetes` - Google Kubernetes kubeadm & kubectl
