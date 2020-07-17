@@ -320,6 +320,7 @@ flatpak:
 - name: https://flathub.org/repo/appstream/com.getpostman.Postman.flatpakref
 - name: https://flathub.org/repo/appstream/org.telegram.desktop.flatpakref
 - name: https://flathub.org/repo/appstream/org.gnome.Evolution.flatpakref
+- name: https://flathub.org/repo/appstream/org.signal.Signal.flatpakref
 pip_executable: pip
 pip:
 - pip
