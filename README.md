@@ -17,7 +17,7 @@
 
 ## Assumptions
 
-* 40GB free space on OS drive
+* 15GB free space on OS drive
 * ssh private key or password method
 * user specified in `group_vars` or passed in variable `ansible_ssh_user`
 * by default, extra binaries (outside packages) will be installed in `/usr/local/bin` (adjustable by `bin_path` variable) If you prefer to keep them in cloud (sync between computers), down below I'll attach info how to replace binaries with proper symlinks (work in progress)

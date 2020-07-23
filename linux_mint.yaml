@@ -47,8 +47,8 @@
     tags:
     - assert
   # free space for stuff
-  - name: assert_root_partition_have_40_GB_of_free_space
-    assert: { that: item.size_available > 42949672960 } # 40 GB free
+  - name: assert_root_partition_is_15_GB_of_free_space
+    assert: { that: item.size_available > 13622320128 } # 20 GB free
     loop: '{{ ansible_mounts }}'
     ignore_errors: no
     when: item.mount == '/'
