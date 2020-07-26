@@ -47,6 +47,8 @@ repositories:
   filename: y-ppa-manager
 - repo: ppa:libreoffice/ppa
   filename: libreoffice
+- repo: ppa:wireshark-dev/stable
+  filename: wireshark
 repositories_optional:
 - repo: ppa:xuzhen666/dockbarx
   codename: bionic
