@@ -317,20 +317,22 @@ deb:
 - https://github.com/kaikramer/keystore-explorer/releases/download/v5.4.3/kse-5.4.3.deb
 flatpak:
 - name: https://flathub.org/repo/appstream/com.getpostman.Postman.flatpakref
-pip_executable: pip3
-pip:
-- pip
-- psutil
-- s-tui
-- pywinrm[kerberos]
-- pywinrm[credssp]
-- pypsrp
-- pylint
-- yamllint
-- ansible-lint
-- jmespath
-- jsonlint
-- gittyleaks
+pip_executable:
+  - pip2
+  - pip3
+pip_module:
+  - pip
+  - psutil
+  - s-tui
+  - pywinrm[kerberos]
+  - pywinrm[credssp]
+  - pypsrp
+  - pylint
+  - yamllint
+  - ansible-lint
+  - jmespath
+  - jsonlint
+  - gittyleaks
 unpack:
 - url: https://get.helm.sh/helm-v2.14.3-linux-amd64.tar.gz
   destination: helm

@@ -327,20 +327,22 @@ flatpak:
 - name: https://flathub.org/repo/appstream/org.telegram.desktop.flatpakref
 - name: https://flathub.org/repo/appstream/org.gnome.Evolution.flatpakref
 - name: https://flathub.org/repo/appstream/org.signal.Signal.flatpakref
-pip_executable: pip
-pip:
-- pip
-- psutil
-- s-tui
-- pywinrm[kerberos]
-- pywinrm[credssp]
-- pypsrp
-- pylint
-- yamllint
-- ansible-lint
-- jmespath
-- jsonlint
-- gittyleaks
+pip_executable:
+  - pip2
+  - pip3
+pip_module:
+  - pip
+  - psutil
+  - s-tui
+  - pywinrm[kerberos]
+  - pywinrm[credssp]
+  - pypsrp
+  - pylint
+  - yamllint
+  - ansible-lint
+  - jmespath
+  - jsonlint
+  - gittyleaks
 unpack:
 - url: https://get.helm.sh/helm-v2.14.3-linux-amd64.tar.gz
   destination: helm
