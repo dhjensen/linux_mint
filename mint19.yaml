@@ -181,6 +181,7 @@ packages:
 - python3-wheel
 - python3-gpg
 - python3-psutil
+- python3-setuptools
 - diodon
 - doublecmd-gtk
 - htop
