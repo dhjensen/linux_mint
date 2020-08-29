@@ -325,6 +325,7 @@ pip:
 - pywinrm[kerberos]
 - pywinrm[credssp]
 - pypsrp
+- pylint
 - yamllint
 - ansible-lint
 - jmespath
