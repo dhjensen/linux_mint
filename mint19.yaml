@@ -310,8 +310,6 @@ packages_optional:
 - gnome-shell-pomodoro
 - pinentry-gtk2
 - y-ppa-manager
-- chrome-remote-desktop
-- smem
 deb:
 - https://github.com/angryip/ipscan/releases/download/3.7.2/ipscan_3.7.2_amd64.deb
 - https://release.axocdn.com/linux/gitkraken-amd64.deb
