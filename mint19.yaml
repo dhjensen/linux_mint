@@ -332,6 +332,7 @@ flatpak:
 - name: https://flathub.org/repo/appstream/org.telegram.desktop.flatpakref
 - name: https://flathub.org/repo/appstream/org.gnome.Evolution.flatpakref
 - name: https://flathub.org/repo/appstream/org.signal.Signal.flatpakref
+- name: https://flathub.org/repo/appstream/us.zoom.Zoom.flatpakref
 pip_executable:
   - pip2
   - pip3
