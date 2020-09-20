@@ -1,5 +1,30 @@
 # Changelog "linux_mint"
 
+## Version 2.0.6 [2020-09-18]
+
+* workaround in case where future tasks add proper gpg keys (timesyncd install will fail)
+* [APPLICATION] upgraded `etcher` to version 1.5.109
+* [APPLICATION] upgraded `terraform` to version 0.13.3
+* [APPLICATION] upgraded `lens` to version 3.6.3
+* [APPLICATION] upgraded `helm` v3 to version 3.3.2
+* [APPLICATION] upgraded `docker-compose` to version 1.27.3
+* [APPLICATION] upgraded `k3s` to version 1.18.9
+
+## Version 2.0.5 [2020-09-14]
+
+* [APPLICATION] upgraded `minikube` to version 1.13.0
+* [APPLICATION] upgraded `amass` to version 3.10.3
+* [APPLICATION] upgraded `helm` v3 to version  3.3.1
+* [APPLICATION] upgraded `terraform` to version 0.13.2
+* [APPLICATION] upgraded `packetsender` to version 7.0.5
+* [APPLICATION] upgraded `rke` to version 1.1.7
+* [APPLICATION] upgraded `boostnote` to version 0.16.1
+* [APPLICATION] upgraded `tflint` to version 0.20.1
+* [APPLICATION] upgraded `etcher` to version 1.5.108
+* [APPLICATION] upgraded `docker-compose` to version 1.27.2
+* [APPLICATION] upgraded `lens` to version 3.6.0
+* [VSCODE] remove obsoleted extensions
+
 ## Version 2.0.4 [2020-08-26]
 
 * [APPLICATION] upgraded `minikube` to version 1.12.2
