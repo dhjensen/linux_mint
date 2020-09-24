@@ -267,6 +267,8 @@ custom_packages:
 | GIMP | GNU Image Manipulation Program | [https://www.gimp.org/](https://www.gimp.org/)|
 | Telegram | Free end to end encrypted chat | [https://telegram.org](https://telegram.org)
 | WoeUSB | USB Image writer | [https://github.com/slacka/WoeUSB](https://github.com/slacka/WoeUSB)|
+| pavucontrol | PulseAudio Volume Control | [https://freedesktop.org/software/pulseaudio/pavucontrol/](https://freedesktop.org/software/pulseaudio/pavucontrol/) |
+| audacity | Audacity is an easy-to-use, multi-track audio editor and recorder | [https://www.audacityteam.org/](https://www.audacityteam.org/) |
 
 ### Packages: Flatpak
 
