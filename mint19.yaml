@@ -308,8 +308,7 @@ packages_optional:
 - tlpui
 - teams
 - goaccess
-# GNU Privacy Assistant makes it easier to handle gpg keys
-- gpa
+- gpa # GNU Privacy Assistant makes it easier to handle gpg keys
 - hashcat
 - lutris
 - gnome-shell-pomodoro
