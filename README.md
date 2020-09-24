@@ -240,7 +240,6 @@ custom_packages:
 | VirtualBox|Virtualization|[https://www.virtualbox.org/](https://www.virtualbox.org/)|
 | Visual Studio Code|Code editor|[https://code.visualstudio.com/](https://code.visualstudio.com/)|
 | Wireshark | Network protocol analyzer | [https://www.wireshark.org/](https://www.wireshark.org/)|
-| WPS Office for Linux | Productivity Tools | [https://www.wps.com/wps-office-for-linux/](https://www.wps.com/wps-office-for-linux/)
 | XCA | Certificate Manager|[https://hohnstaedt.de/xca/](https://hohnstaedt.de/xca/)|
 
 ### Packages: Optional (not complete list)
