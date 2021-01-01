@@ -1,5 +1,42 @@
 # Changelog "linux_mint"
 
+## Version 2.1.3 [2020-12-22]
+
+* [APPLICATION] fixed broken minikube release
+* [APPLICATION] fixed helm v3 still renaming to `helm3`
+* [BREAKING_CHANGE] downgrade `python-gtk2` to 2.24.0.5 for ubuntu 20
+* [BREAKING_CHANGE] downgrade `zenmap` to 7.60 for ubuntu 20
+
+## Version 2.1.2 [2020-12-19]
+
+* [BREAKING_CHANGE] removal of helm v2, helm v3 changes name to `helm` replacing `helm3`
+* [APPLICATION] upgraded `helm` to version 3.4.2
+* [APPLICATION] upgraded `k3s` to version 1.19.5
+* [APPLICATION] upgraded `lens` to version 4.0.4
+* [APPLICATION] upgraded `minikube` to version 1.16.0
+* [APPLICATION] upgraded `polaris` to version 3.0.0
+* [APPLICATION] upgraded `etcher` to version 1.5.113
+* [APPLICATION] upgraded `packer` to version 1.6.6
+* [APPLICATION] upgraded `hamsket` to version 0.6.2
+* [APPLICATION] upgraded `terminus alfa` to verson 1.0.122
+* [APPLICATION] upgraded `tflint` to version 0.22.0
+* [APPLICATION] upgraded `vault` to version 1.6.1
+
+## Version 2.1.1 [2020-11-26]
+
+* [APPLICATION] upgraded `k3s` to version 1.19.4
+* [APPLICATION] upgraded `lens` to version 3.6.9
+* [APPLICATION] upgraded `minikube` to version 1.15.1
+* [APPLICATION] upgraded `rke` to version 1.2.3
+* [APPLICATION] upgraded `ctop` to version 0.7.5
+* [APPLICATION] upgraded `etcher` to version 1.5.111
+* [APPLICATION] upgraded `hadolint` to version 1.19.0
+* [APPLICATION] upgraded `hamsket` from nightly to 0.6.0
+* [APPLICATION] upgraded `tflint` to version 0.21.0
+* [APPLICATION] upgraded `vagrant` to version 2.2.14
+* [APPLICATION] upgraded `kse` to version 5.4.4
+* [APPLICATION] removed `teamviewer`
+
 ## Version 2.1.0 [2020-11-01]
 
 * [APPLICATION] upgraded `helm3` to version 3.4.0
