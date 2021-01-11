@@ -318,6 +318,7 @@ packages_optional:
 - smem
 - pavucontrol # Audio control
 - audacity # Sound recorder and mixer
+- jq
 deb:
 - https://github.com/angryip/ipscan/releases/download/3.7.3/ipscan_3.7.3_amd64.deb
 - https://release.axocdn.com/linux/gitkraken-amd64.deb
