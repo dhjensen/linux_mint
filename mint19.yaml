@@ -337,6 +337,7 @@ flatpak:
 - name: https://flathub.org/repo/appstream/org.gnome.Evolution.flatpakref
 - name: https://flathub.org/repo/appstream/org.signal.Signal.flatpakref
 - name: https://flathub.org/repo/appstream/us.zoom.Zoom.flatpakref
+- name: https://dl.flathub.org/repo/appstream/com.bitwarden.desktop.flatpakref
 pip_executable:
 - pip2
 - pip3
@@ -387,6 +388,9 @@ downloads:
   skip_tree: false
 - url: https://github.com/FairwindsOps/polaris/releases/download/3.0.0/polaris_3.0.0_linux_amd64.tar.gz
   destination: polaris
+  skip_tree: false
+- url: https://github.com/bitwarden/cli/releases/download/v1.13.3/bw-linux-1.13.3.zip
+  destination: bw
   skip_tree: false
 files:
 - url: https://github.com/docker/compose/releases/download/1.27.4/docker-compose-Linux-x86_64
