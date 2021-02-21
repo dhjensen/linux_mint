@@ -4,16 +4,17 @@ ansible-lint:
   stage: ansible-lint
   image: python:3-slim
   services:
-    - docker:19.03-dind
+    - docker:20.10-dind
   before_script:
-  - pip install --upgrade ansible-lint yamllint
+  - /usr/local/bin/python -m pip install --upgrade pip
+  - pip install --upgrade ansible-lint yamllint ansible
   - yamllint --version
   - ansible-lint --version
   script:
     - yamllint -c ./.yamllint ./tasks/*.yml
     - yamllint -c ./.yamllint *.yaml
     - ansible-lint ./tasks/*.yml
-    - ansible-lint .
+    - ansible-lint linux_mint.yaml
   tags:
     - docker
     - shared

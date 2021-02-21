@@ -1,5 +1,57 @@
 # Changelog "linux_mint"
 
+## Version 2.1.6 [2021-02-20]
+
+* [BREAKING_CHANGE] remove `kubeval` as obsolete
+* [APPLICATION] added `kubeconform` [https://github.com/yannh/kubeconform](https://github.com/yannh/kubeconform)
+* [APPLICATION] upgraded `amass` to version 3.11.5
+* [APPLICATION] upgraded `angryip` to version 3.7.6
+* [APPLICATION] upgraded `docker-compose` to version 1.28.4
+* [APPLICATION] upgraded `etcher` to version 1.5.116
+* [APPLICATION] upgraded `hadolint` to version 1.22.1
+* [APPLICATION] upgraded `helm` to version 3.5.2
+* [APPLICATION] upgraded `k3d` in version 4.2.0
+* [APPLICATION] upgraded `lens` to version 4.1.2 as DEB from AppImage
+* [APPLICATION] upgraded `packer` to version 1.7.0
+* [APPLICATION] upgraded `polaris` to version 3.1.3
+* [APPLICATION] upgraded `terminus-alfa` to version 1.0.134
+* [APPLICATION] upgraded `terraform` to version 0.14.7
+* [APPLICATION] upgraded `tflint` to version 0.24.1
+* [APPLICATION] upgraded `wpsoffice` to version 11.1.0.10161
+* Prepared for `ansible-lint` in version 5.x
+
+## Version 2.1.5 [2021-01-31]
+
+* [APPLICATION] added `k3d` in version 4.0.0 - [https://k3d.io/](https://k3d.io/)
+* [APPLICATION] added `raspberry pi imager` in version 1.5 [https://www.raspberrypi.org/software/](https://www.raspberrypi.org/software/)
+* [APPLICATION] upgraded `k3s` to version 1.19.7
+* [APPLICATION] upgraded `etcher` to version 1.5.115
+* [APPLICATION] upgraded `amass` to version 3.11.2
+* [APPLICATION] upgraded `docker-compose` to version 1.28.2
+* [APPLICATION] upgraded `helm` to version 3.5.1
+* [APPLICATION] upgraded `lens` to version 4.0.8
+* [APPLICATION] upgraded `minikube` to version 1.17.1
+* [APPLICATION] upgraded `polaris` to version 3.0.3
+* [APPLICATION] upgraded `rke` to version 1.2.5
+* [APPLICATION] upgraded `angryip` to version 3.7.4
+* [APPLICATION] upgraded `hadolint` to version 1.21.0
+* [APPLICATION] upgraded `terminus-alfa` to version 1.0.130
+* [APPLICATION] upgraded `terraform` to version 0.14.5
+* [APPLICATION] upgraded `tflint` to version 0.24.0
+* [APPLICATION] upgraded `vault` to version 1.6.2
+
+## Version 2.1.4 [2021-01-15]
+
+* [BREAKING_CHANGE] - since version 2.2.0, planned in February support for Linux Mint 19.x will be removed
+* [OS] Playbook supports Linux Mint 20.1 'Ulyssa'
+* [APPLICATION] upgraded `lens` to version 4.0.6
+* [APPLICATION] upgraded `rke` to version 1.2.4
+* [APPLICATION] upgraded `terraform` to version 0.14.4
+* [APPLICATION] upgraded `tflint` to version 0.23.1
+* [APPLICATION] upgraded `terminus alfa` to version 1.0.127
+* [APPLICATION] upgraded `helm` to version 3.5.0
+* [APPLICATION] upgraded `etcher` to version 1.5.114
+
 ## Version 2.1.3 [2020-12-22]
 
 * [APPLICATION] fixed broken minikube release
