@@ -123,7 +123,6 @@ repositories_remove:
   filename: forticlient
   codename: bionic
 keys:
-- https://download.opensuse.org/repositories/home:stevenpusser/xUbuntu_18.04/Release.key
 - https://download.opensuse.org/repositories/home:Alexx2000/xUbuntu_18.04/Release.key
 - https://packages.microsoft.com/keys/microsoft.asc
 - https://dl-ssl.google.com/linux/linux_signing_key.pub
@@ -336,13 +335,13 @@ deb:
 - https://github.com/kaikramer/keystore-explorer/releases/download/v5.4.3/kse-5.4.3.deb
 - https://downloads.raspberrypi.org/imager/imager_1.5_amd64.deb
 - https://github.com/lensapp/lens/releases/download/v4.1.2/Lens-4.1.2.amd64.deb
+- https://github.com/bitwarden/desktop/releases/download/v1.24.6/Bitwarden-1.24.6-amd64.deb
 flatpak:
 - name: https://flathub.org/repo/appstream/com.getpostman.Postman.flatpakref
 - name: https://flathub.org/repo/appstream/org.telegram.desktop.flatpakref
 - name: https://flathub.org/repo/appstream/org.gnome.Evolution.flatpakref
 - name: https://flathub.org/repo/appstream/org.signal.Signal.flatpakref
 - name: https://flathub.org/repo/appstream/us.zoom.Zoom.flatpakref
-- name: https://dl.flathub.org/repo/appstream/com.bitwarden.desktop.flatpakref
 pip_executable:
 - pip2
 - pip3
