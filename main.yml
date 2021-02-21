@@ -1,0 +1,9 @@
+---
+- name: Import_prepare_mint_desktop
+  hosts: all
+
+- name: Import
+  import_playbook: linux_mint.yaml
+  vars:
+    install_optional: false
+    install_vscode_extensions: false
