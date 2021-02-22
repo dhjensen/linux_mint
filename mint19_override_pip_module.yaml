@@ -1,0 +1,14 @@
+---
+pip_module:
+- pip
+- psutil
+- s-tui
+- pywinrm[kerberos]
+- pywinrm[credssp]
+- pypsrp
+- pylint
+- yamllint
+- ansible-lint
+- jmespath
+- jsonlint
+- gittyleaks

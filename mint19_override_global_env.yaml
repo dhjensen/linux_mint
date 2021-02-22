@@ -1,0 +1,4 @@
+---
+global_env:
+- name: EDITOR
+  value: vim

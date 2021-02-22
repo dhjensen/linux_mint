@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Yubikey Manager
+GenericName=Yubikey Manager
+Exec=/usr/local/bin/yubikeymanager
+Terminal=false
+Icon=/usr/local/bin/yubikeymanager
+Categories=Utility;
