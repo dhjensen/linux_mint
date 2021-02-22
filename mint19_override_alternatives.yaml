@@ -1,0 +1,7 @@
+---
+alternatives:
+- name: editor
+  path: /usr/bin/vim
+  variable: EDITOR
+- name: pinentry
+  path: /usr/bin/pinentry-gtk-2

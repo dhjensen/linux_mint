@@ -1,0 +1,12 @@
+---
+custom_repositories:
+- repo: ppa:libreoffice/ppa
+  filename: libreoffice
+- repo: ppa:wireshark-dev/stable
+  filename: wireshark
+- repo: ppa:lutris-team/lutris
+  filename: lutris
+  codename: bionic
+- repo: ppa:team-xbmc/ppa
+  filename: kodippa
+  codename: bionic

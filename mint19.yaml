@@ -46,11 +46,11 @@ repositories:
   filename: vscode
 - repo: ppa:webupd8team/y-ppa-manager
   filename: y-ppa-manager
-- repo: ppa:libreoffice/ppa
-  filename: libreoffice
-- repo: ppa:wireshark-dev/stable
-  filename: wireshark
 repositories_optional:
+ # brave browser
+- repo: deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ bionic main
+  filename: brave-browser-release-bionic.list
+  codename: bionic
 - repo: ppa:xuzhen666/dockbarx
   codename: bionic
   filename: dockbarx
@@ -69,6 +69,9 @@ repositories_optional:
 - repo: ppa:noobslab/themes
   filename: noobslab-themes
   codename: bionic
+- repo: deb http://apt.puppetlabs.com bionic puppet5
+  filename: puppet5
+  codename: bionic
 - repo: deb [arch=amd64] https://repo.skype.com/deb stable main
   codename: stable
   filename: skype-stable
@@ -81,6 +84,9 @@ repositories_optional:
 - repo: deb https://aquasecurity.github.io/trivy-repo/deb bionic main
   filename: trivy
   codename: bionic
+- repo: deb [arch=amd64] http://repository.veeam.com/backup/linux/agent/dpkg/debian/public stable veeam
+  codename: stable
+  filename: veeam
 - repo: ppa:unit193/encryption
   filename: veracrypt
   codename: bionic
@@ -96,23 +102,7 @@ repositories_optional:
 - repo: deb http://apt.insync.io/mint tricia non-free contrib
   filename: insync
   codename: tricia
-- repo: ppa:lutris-team/lutris
-  filename: lutris
-  codename: bionic
-- repo: ppa:team-xbmc/ppa
-  filename: kodippa
-  codename: bionic
 repositories_remove:
-# brave browser
-- repo: deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ bionic main
-  filename: brave-browser-release-bionic.list
-  codename: bionic
-- repo: deb http://apt.puppetlabs.com bionic puppet5
-  filename: puppet5
-  codename: bionic
-- repo: deb [arch=amd64] http://repository.veeam.com/backup/linux/agent/dpkg/debian/public stable veeam
-  codename: stable
-  filename: veeam
 - repo: ppa:alexx2000/doublecmd
   filename: alexx2000-doublecmd
 - repo: deb https://knqyf263.github.io/trivy-repo/deb bionic main
@@ -123,6 +113,7 @@ repositories_remove:
   filename: forticlient
   codename: bionic
 keys:
+- https://download.opensuse.org/repositories/home:stevenpusser/xUbuntu_18.04/Release.key
 - https://download.opensuse.org/repositories/home:Alexx2000/xUbuntu_18.04/Release.key
 - https://packages.microsoft.com/keys/microsoft.asc
 - https://dl-ssl.google.com/linux/linux_signing_key.pub
@@ -131,25 +122,20 @@ keys:
 - https://www.virtualbox.org/download/oracle_vbox_2016.asc
 - https://download.sublimetext.com/sublimehq-pub.gpg
 - https://download.docker.com/linux/ubuntu/gpg
+- http://repository.veeam.com/keys/veeam.gpg
 - https://repo.skype.com/data/SKYPE-GPG-KEY
 - https://packagecloud.io/github/git-lfs/gpgkey
+- https://apt.puppetlabs.com/pubkey.gpg
 - https://packagecloud.io/asbru-cm/asbru-cm/gpgkey
 - https://aquasecurity.github.io/trivy-repo/deb/public.key
+- https://brave-browser-apt-release.s3.brave.com/brave-core.asc
 - https://download.spotify.com/debian/pubkey_0D811D58.gpg
 - https://d2t3ff60b2tol4.cloudfront.net/repomd.xml.key
 keys_keyserver:
 - keyserver: keyserver.ubuntu.com
   id: ACCAF35C
 keys_remove:
-# fortinet repository
 - 5E54716D
-# Brave browser
-- C2D4E821
-# Puppet
-- EF8D349F
-# Veeam
-- FBF8A590
-- 8719FCE4
 packages_essential:
 - apt-transport-https
 - mc
@@ -165,6 +151,9 @@ packages:
 - synaptic
 - ansible
 - azure-cli
+- google-cloud-sdk
+- gcsfuse
+- awscli
 - palemoon
 - code
 - powershell
@@ -187,7 +176,6 @@ packages:
 - python3-wheel
 - python3-gpg
 - python3-psutil
-- python3-setuptools
 - diodon
 - doublecmd-gtk
 - htop
@@ -201,6 +189,10 @@ packages:
 - remmina-plugin-vnc
 - remmina-plugin-secret
 - mpv
+- rabbitvcs-core
+- liblinear-tools
+- liblinear-dev
+- p7zip-rar
 - hwinfo
 - ndiff
 - extlinux
@@ -269,20 +261,14 @@ packages:
 - dconf-cli
 - dconf-editor
 - freerdp2-x11
-- auditd
-- libreoffice-l10n-da
-- libreoffice-help-da
-- libreoffice-evolution
-- myspell-da
 - zsh
 - netcat
 - clusterssh
 - moreutils
 packages_optional:
-# - enpass
-# I dont develop puppet or use the system
-# - pdk
-# - puppet-agent
+- enpass
+- pdk
+- puppet-agent
 - kodi
 - dockbarx
 - grub-customizer
@@ -295,37 +281,28 @@ packages_optional:
 - sublime-text
 - javascript-common
 - geoip-database-extra
-#- thunderbird
+- thunderbird
 - neofetch
 - skypeforlinux
-#- veeam
-#- veeamsnap
+- veeam
+- veeamsnap
 - pinta
 - woeusb
 - veracrypt
 - spotify-client
 - isomaster
-#- brave-browser
+- brave-browser
 - tlpui
 - teams
 - goaccess
-- gpa # GNU Privacy Assistant makes it easier to handle gpg keys
 - hashcat
-- lutris
-- gnome-shell-pomodoro
-- pinentry-gtk2
 - y-ppa-manager
-- smem
-- pavucontrol # Audio control
-- audacity # Sound recorder and mixer
-- jq
-- ghp-import # Import tool for github pages
 deb:
 - https://github.com/angryip/ipscan/releases/download/3.7.6/ipscan_3.7.6_amd64.deb
 - https://release.axocdn.com/linux/gitkraken-amd64.deb
 - https://releases.hashicorp.com/vagrant/2.2.14/vagrant_2.2.14_x86_64.deb
 - https://launchpad.net/ubuntu/+archive/primary/+files/libgoo-canvas-perl_0.06-2ubuntu3_amd64.deb
-- https://github.com/BoostIO/BoostNote.next/releases/download/v0.12.3/boost-note-linux.deb
+- https://github.com/BoostIO/boost-releases/releases/download/v0.16.1/boostnote_0.16.1_amd64.deb
 - https://github.com/Eugeny/terminus/releases/download/v1.0.134/terminus-1.0.134-linux.deb
 - https://github.com/TheGoddessInari/hamsket/releases/download/0.6.2/hamsket_0.6.2_amd64.deb
 - https://github.com/kubernetes/minikube/releases/download/v1.17.1/minikube_1.17.1-0_amd64.deb
@@ -335,13 +312,8 @@ deb:
 - https://github.com/kaikramer/keystore-explorer/releases/download/v5.4.3/kse-5.4.3.deb
 - https://downloads.raspberrypi.org/imager/imager_1.5_amd64.deb
 - https://github.com/lensapp/lens/releases/download/v4.1.2/Lens-4.1.2.amd64.deb
-- https://github.com/bitwarden/desktop/releases/download/v1.24.6/Bitwarden-1.24.6-amd64.deb
 flatpak:
 - name: https://flathub.org/repo/appstream/com.getpostman.Postman.flatpakref
-- name: https://flathub.org/repo/appstream/org.telegram.desktop.flatpakref
-- name: https://flathub.org/repo/appstream/org.gnome.Evolution.flatpakref
-- name: https://flathub.org/repo/appstream/org.signal.Signal.flatpakref
-- name: https://flathub.org/repo/appstream/us.zoom.Zoom.flatpakref
 pip_executable:
 - pip2
 - pip3
@@ -352,7 +324,6 @@ pip_module:
 - pywinrm[kerberos]
 - pywinrm[credssp]
 - pypsrp
-- pylint
 - yamllint
 - ansible-lint
 - jmespath
@@ -393,9 +364,6 @@ downloads:
 - url: https://github.com/FairwindsOps/polaris/releases/download/3.1.3/polaris_3.1.3_linux_amd64.tar.gz
   destination: polaris
   skip_tree: false
-- url: https://github.com/bitwarden/cli/releases/download/v1.13.3/bw-linux-1.13.3.zip
-  destination: bw
-  skip_tree: false
 files:
 - url: https://github.com/docker/compose/releases/download/1.28.4/docker-compose-Linux-x86_64
   destination: docker-compose
@@ -412,9 +380,6 @@ files:
   destination: k3d
 - url: https://github.com/hadolint/hadolint/releases/download/v1.22.1/hadolint-Linux-x86_64
   destination: hadolint
-- url: https://github.com/ytmdesktop/ytmdesktop/releases/download/v1.12.1/YouTube.Music.Desktop.App-1.12.1.AppImage
-  destination: youtubemusic
-  desktop_file: ./files/apps/youtubemusic/youtubemusic.desktop
 
 #mitogen:
 #  config:
@@ -454,8 +419,6 @@ startup:
   source: ./files/apps/remmina/remmina-applet.desktop
 - filename: diodon.desktop
   source: ./files/apps/diodon/diodon.desktop
-- filename: org.gnome.Pomodoro.desktop
-  source: ./files/apps/pomodoro/org.gnome.Pomodoro.desktop
 services:
 - ssh
 - docker
@@ -467,7 +430,7 @@ dconf:
 - key: "/org/cinnamon/desktop/keybindings/wm/begin-move"
   state: present
   value: "['']"
-timezone: Europe/Copenhagen
+timezone: Europe/Warsaw
 vscode_obsolete:
 - ms-vscode.go
 vscode:
@@ -599,8 +562,6 @@ alternatives:
 - name: editor
   path: /usr/bin/mcedit
   variable: EDITOR
-- name: pinentry
-  path: /usr/bin/pinentry-gtk-2
 global_env:
 - name: EDITOR
   value: mcedit
