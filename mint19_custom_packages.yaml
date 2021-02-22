@@ -2,9 +2,10 @@
 custom_packages:
 - python3-setuptools
 - auditd
-- libreoffice-l10n-da
-- libreoffice-help-da
-- libreoffice-evolution
+# - libreoffice
+# - libreoffice-l10n-da
+# - libreoffice-help-da
+# - libreoffice-evolution
 - myspell-da
 - gpa # GNU Privacy Assistant makes it easier to handle gpg keys
 - lutris
