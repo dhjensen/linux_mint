@@ -18,3 +18,6 @@ files:
 - url: https://github.com/ytmdesktop/ytmdesktop/releases/download/v1.12.1/YouTube.Music.Desktop.App-1.12.1.AppImage
   destination: youtubemusic
   desktop_file: ./files/apps/youtubemusic/youtubemusic.desktop
+- url: https://developers.yubico.com/yubikey-manager-qt/Releases/yubikey-manager-qt-1.1.5-linux.AppImage
+  destination: yubikeymanager
+  desktop_file: ./files/apps/yubikeymanager/yubikeymanager.desktop
