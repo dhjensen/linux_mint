@@ -7,3 +7,4 @@
   vars:
     install_optional: false
     install_vscode_extensions: false
+    retries_count: 0
