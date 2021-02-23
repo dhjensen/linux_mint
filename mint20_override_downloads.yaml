@@ -1,0 +1,24 @@
+---
+downloads:
+- url: https://releases.hashicorp.com/packer/1.7.0/packer_1.7.0_linux_amd64.zip
+  destination: packer
+  skip_tree: false
+- url: https://releases.hashicorp.com/terraform/0.14.7/terraform_0.14.7_linux_amd64.zip
+  destination: terraform
+  skip_tree: false
+- url: https://releases.hashicorp.com/vault/1.6.2/vault_1.6.2_linux_amd64.zip
+  destination: vault
+  skip_tree: false
+- url: https://github.com/terraform-linters/tflint/releases/download/v0.24.1/tflint_linux_amd64.zip
+  destination: tflint
+  skip_tree: false
+- url: https://github.com/ffuf/ffuf/releases/download/v1.0.2/ffuf_1.0.2_linux_amd64.tar.gz
+  destination: ffluf
+  skip_tree: false
+- url: https://github.com/FairwindsOps/polaris/releases/download/3.1.3/polaris_3.1.3_linux_amd64.tar.gz
+  destination: polaris
+  skip_tree: false
+# My additions
+- url: https://github.com/bitwarden/cli/releases/download/v1.13.3/bw-linux-1.13.3.zip
+  destination: bw
+  skip_tree: false

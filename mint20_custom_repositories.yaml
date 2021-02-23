@@ -1,0 +1,8 @@
+---
+custom_repositories:
+- repo: ppa:wireshark-dev/stable
+  filename: wireshark
+  codename: focal
+- repo: ppa:team-xbmc/ppa
+  filename: kodippa
+  codename: focal

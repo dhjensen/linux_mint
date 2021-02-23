@@ -1,0 +1,17 @@
+---
+custom_packages:
+# - python3-setuptools
+- auditd
+# - libreoffice
+# - libreoffice-l10n-da
+# - libreoffice-help-da
+# - libreoffice-evolution
+- myspell-da
+- gpa # GNU Privacy Assistant makes it easier to handle gpg keys
+- pinentry-gtk2
+- smem
+- pavucontrol # Audio control
+- audacity # Sound recorder and mixer
+- jq
+- ghp-import # Import tool for github pages
+- vim

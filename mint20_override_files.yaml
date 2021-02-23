@@ -1,0 +1,24 @@
+---
+files:
+- url: https://github.com/docker/compose/releases/download/1.28.4/docker-compose-Linux-x86_64
+  destination: docker-compose
+- url: https://github.com/bcicen/ctop/releases/download/v0.7.5/ctop-0.7.5-linux-amd64
+  destination: ctop
+- url: https://github.com/rancher/rke/releases/download/v1.2.5/rke_linux-amd64
+  destination: rke
+- url: https://github.com/dannagle/PacketSender/releases/download/v7.0.5/PacketSender_v7.0.5.AppImage
+  destination: packetsender
+  desktop_file: ./files/apps/packetsender/packetsender.desktop
+- url: https://github.com/k3s-io/k3s/releases/download/v1.19.7%2Bk3s1/k3s
+  destination: k3s
+- url: https://github.com/rancher/k3d/releases/download/v4.2.0/k3d-linux-amd64
+  destination: k3d
+- url: https://github.com/hadolint/hadolint/releases/download/v1.22.1/hadolint-Linux-x86_64
+  destination: hadolint
+# My additions
+- url: https://github.com/ytmdesktop/ytmdesktop/releases/download/v1.12.1/YouTube.Music.Desktop.App-1.12.1.AppImage
+  destination: youtubemusic
+  desktop_file: ./files/apps/youtubemusic/youtubemusic.desktop
+- url: https://developers.yubico.com/yubikey-manager-qt/Releases/yubikey-manager-qt-1.1.5-linux.AppImage
+  destination: yubikeymanager
+  desktop_file: ./files/apps/yubikeymanager/yubikeymanager.desktop
