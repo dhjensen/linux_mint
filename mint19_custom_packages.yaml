@@ -17,3 +17,5 @@ custom_packages:
 - jq
 - ghp-import # Import tool for github pages
 - vim
+- libpam-yubico # Support Yubikey login.
+- yubikey-manager # Configure yubikey for login.
