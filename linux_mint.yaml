@@ -408,10 +408,10 @@
   #   - python
   - name: install_and_upgrade_pip_packages
     pip:
-      name: "{{ item[1] }}"
+      name: "{{ item }}"
       extra_args: --upgrade --upgrade-strategy=only-if-needed --ignore-installed
-      executable: "{{ item[0] }}"
-    loop: "{{ pip_executable|product(pip_module)|list }}"
+      executable: "{{ pip_executable }}"
+    loop: "{{ pip }}"
     retries: "{{ retries_count }}"
     delay: "{{ delay_time }}"
     register: r_pip
