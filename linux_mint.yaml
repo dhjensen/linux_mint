@@ -7,8 +7,9 @@
   vars:
     install_optional: true                    # should optional packages be installed?
     install_deb: true                         # should extra deb packages should be installed
-    install_flatpak: true
+    install_flatpak: true                     # should we install flatpak software
     install_vscode_extensions: true           # should we install extra vscode extensions
+    install_npm: true                         # should we install npm packages
     install_zsh: false                        # install and configure oh-my-zhs and power10k
     install_state: latest                     # if set to latest, every pass of playbook will also update packages
     config_ansible: true                      # do changes in change ansible.cfg
@@ -27,9 +28,9 @@
   # ansible version
   - name: verify_ansible_meets_version_requirements
     assert:
-      that: "ansible_version.full is version_compare('2.9', '>=')"
+      that: "ansible_version.full is version_compare('2.10', '>=')"
       msg: >
-        "You must update Ansible to at least 2.9 to use this version of playbook"
+        "You must update Ansible to at least 2.10 to use this version of playbook"
     tags:
     - assert
   # setup module - we need these facts
@@ -80,6 +81,7 @@
       - "Install optional packages    : {{ install_optional|bool }}"
       - "Install deb packages         : {{ install_deb|bool }}"
       - "Install_flatpak packages     : {{ install_flatpak|bool }}"
+      - "Install_npm packages     :     {{ install_npm|bool }}"
       - "Install vscode extensions    : {{ install_vscode_extensions|bool }} "
       - "Install zsh                  : {{ install_zsh|bool }}"
       - "Config for Ansible           : {{ config_ansible }}"
@@ -88,6 +90,7 @@
       - "Bin Path to put files into   : {{ bin_path }}"
       - "Active user                  : {{ active_user|string }}"
       - "Linux Mint major version     : {{ ansible_distribution_major_version }}"
+      - "Ansible version              : {{ ansible_version.full }}"
   - name: wait_15_seconds
     pause:
       seconds: 15
@@ -391,21 +394,7 @@
     when: install_deb
     tags:
     - packages
-  # - name: remove_ansible_from_pip
-  #   pip:
-  #     name: ansible
-  #     state: absent
-  #   retries: "{{ retries_count }}"
-  #   delay: "{{ delay_time }}"
-  #   register: r_pip_ansible
-  #   until: r_pip_ansible is success
-  #   any_errors_fatal: false
-  #   ignore_errors: true
-  #   when: pip_executable is defined
-  #   tags:
-  #   - packages
-  #   - base
-  #   - python
+    - deb
   - name: install_and_upgrade_pip_packages
     pip:
       name: "{{ item }}"
@@ -424,7 +413,7 @@
     - base
     - python
   - name: install_flatpak_apps
-    flatpak:
+    community.general.flatpak:
       name: "{{ item.name|string }}"
       state: present
       method: system
@@ -438,6 +427,21 @@
     tags:
     - packages
     - flatpak
+  - name: install_npm_packages
+    community.general.npm:
+      name: "{{ item.name|string }}"
+      state: "{{ item.state|string }}"
+      global: yes
+    loop: "{{ npm }}"
+    retries: "{{ retries_count }}"
+    delay: "{{ delay_time }}"
+    register: r_install_npm
+    until: r_install_npm is success
+    any_errors_fatal: false
+    when: install_npm
+    tags:
+    - packages
+    - npm
     # Download 3-rd party software and unarchive it to `bin_path` setting +x
   - name: check_if_bin_path_exists
     file:
@@ -736,7 +740,7 @@
         enabled: true
       when: r_create_fstrim_override.changed
     - name: sysctl_changes
-      sysctl:
+      ansible.posix.sysctl:
         name: "{{ item.name|string }}"
         value: "{{ item.value|string }}"
         state: "{{ item.state|string }}"
