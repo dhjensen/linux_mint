@@ -1,6 +1,7 @@
 ---
 flatpak:
 - name: https://flathub.org/repo/appstream/com.getpostman.Postman.flatpakref
+# My additions
 - name: https://flathub.org/repo/appstream/org.telegram.desktop.flatpakref
 - name: https://flathub.org/repo/appstream/org.signal.Signal.flatpakref
 - name: https://flathub.org/repo/appstream/us.zoom.Zoom.flatpakref

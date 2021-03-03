@@ -43,8 +43,6 @@ repositories:
   filename: y-ppa-manager
 - repo: ppa:libreoffice/ppa
   filename: libreoffice
-- repo: ppa:wireshark-dev/stable
-  filename: wireshark
 repositories_optional:
  # brave browser
 - repo: deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main
@@ -325,17 +323,14 @@ deb:
 - https://github.com/lensapp/lens/releases/download/v4.1.2/Lens-4.1.2.amd64.deb
 flatpak:
 - name: https://flathub.org/repo/appstream/com.getpostman.Postman.flatpakref
-pip_executable:
-- pip2
-- pip3
-pip_module:
+pip_executable: pip3
+pip:
 - pip
 - psutil
 - s-tui
 - pywinrm[kerberos]
 - pywinrm[credssp]
 - pypsrp
-- pylint
 - yamllint
 - ansible-lint
 - jmespath

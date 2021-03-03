@@ -1,6 +1,6 @@
 ---
 custom_packages:
-- python3-setuptools
+# - python3-setuptools
 - auditd
 # - libreoffice
 # - libreoffice-l10n-da
@@ -8,8 +8,6 @@ custom_packages:
 # - libreoffice-evolution
 - myspell-da
 - gpa # GNU Privacy Assistant makes it easier to handle gpg keys
-- lutris
-- gnome-shell-pomodoro
 - pinentry-gtk2
 - smem
 - pavucontrol # Audio control
@@ -17,5 +15,3 @@ custom_packages:
 - jq
 - ghp-import # Import tool for github pages
 - vim
-- libpam-yubico # Support Yubikey login.
-- yubikey-manager # Configure yubikey for login.

@@ -1,0 +1,17 @@
+---
+startup:
+- filename: redshift-gtk.desktop
+  source: ./files/apps/redshift-gtk/redshift-gtk.desktop
+- filename: shutter.desktop
+  source: ./files/apps/shutter/shutter.desktop
+# - filename: dropbox.desktop
+#   source: ./files/apps/dropbox/dropbox.desktop
+# - filename: synapse.desktop
+#   source: ./files/apps/synapse/synapse.desktop
+# - filename: DockX.desktop
+#   source: ./files/apps/dockbarx/DockX.desktop
+- filename: remmina-applet.desktop
+  source: ./files/apps/remmina/remmina-applet.desktop
+- filename: diodon.desktop
+  source: ./files/apps/diodon/diodon.desktop
+  # My additions
