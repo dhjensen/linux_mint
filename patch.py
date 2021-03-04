@@ -37,10 +37,14 @@ remove_startup = [
   {'filename': 'DockX.desktop', 'source': './files/apps/dockbarx/DockX.desktop'}
 ]
 
-# TODO: Read new content we care about and assign it to variables
+# Assign content we care about to variables
 with open('mint20.yaml') as file:
-  #content = yaml.load(file, Loader=yaml.FullLoader)
   content = yaml.load(file, Loader=yaml.FullLoader)
-  print(content['pip'])
+  deb = content['deb']
+  downloads = content['downloads']
+  files = content['files']
+  flatpak = content['flatpak']
+  pip = content['pip']
+  startup = content['startup']
 
 # TODO: Create the new override files
