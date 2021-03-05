@@ -1,11 +1,28 @@
 import yaml
 
 # Content to add in overrides
+def add(content, items, name):
 
-def add(content, items):
+  return_content = {name: content}
+
   for item in items:
-    content.append(item)
+    return_content[name].append(item)
 
+  return return_content
+
+
+def create_filename(name):
+  filename = 'mint20_override_' + name + '.yaml'
+  return filename
+
+# names of sections to work on.
+name_deb = 'deb'
+name_downloads = 'downloads'
+name_files = 'files'
+name_flatpak = 'flatpak'
+name_pip = 'pip'
+name_startup = 'startup'
+# Content to add
 add_deb = [
   'https://github.com/BoostIO/BoostNote.next/releases/download/v0.13.2/boost-note-linux.deb',
   'https://github.com/bitwarden/desktop/releases/download/v1.24.6/Bitwarden-1.24.6-amd64.deb',
@@ -53,11 +70,19 @@ with open('mint20.yaml') as file:
   startup = content['startup']
 
 # TODO: Create the new override files
-add(deb, add_deb)
-add(downloads, add_downloads)
-add(files, add_files)
-add(flatpak, add_flatpak)
-add(pip, add_pip)
+output_deb = add(deb, add_deb, name_deb)
+add(downloads, add_downloads, name_downloads)
+add(files, add_files, name_files)
+add(flatpak, add_flatpak, name_flatpak)
+add(pip, add_pip, name_pip)
+
+# filename = 'mint20_override_' + f'{deb=}'.split('=')[0] + '.yaml'
+
+# print(filename)
+
+print(output_deb)
+
+print(yaml.dump(output_deb, explicit_start=True))
 
 # Get the name of the variable as string.
 # print(f'{deb=}'.split('=')[0])
