@@ -1,7 +1,7 @@
 import yaml
 
 # Content to add in overrides
-def add(content, items, name):
+def add(content, name, items=[]):
 
   return_content = {name: content}
 
@@ -10,6 +10,12 @@ def add(content, items, name):
 
   return return_content
 
+def remove(target, remove_items):
+
+  for item in remove_items:
+    target.remove(item)
+
+  return target
 
 def create_filename(name):
   filename = 'mint20_override_' + name + '.yaml'
@@ -60,7 +66,7 @@ def main():
 
   # Content to remove in overrides
   remove_startup = [
-    {'filename': 'dropbox.desktop', 'source': './files/app/dropbox/dropbox.desktop'},
+    {'filename': 'dropbox.desktop', 'source': './files/apps/dropbox/dropbox.desktop'},
     {'filename': 'synapse.desktop', 'source': './files/apps/synapse/synapse.desktop'},
     {'filename': 'DockX.desktop', 'source': './files/apps/dockbarx/DockX.desktop'}
   ]
@@ -75,18 +81,22 @@ def main():
     pip = content['pip']
     startup = content['startup']
 
-  #TODO Add startup removal items.
-  output_deb = add(deb, add_deb, name_deb)
-  output_downloads = add(downloads, add_downloads, name_downloads)
-  output_files = add(files, add_files, name_files)
-  output_flatpak = add(flatpak, add_flatpak, name_flatpak)
-  output_pip = add(pip, add_pip, name_pip)
+  # Remove startup content before creating output.
+  remove(startup, remove_startup)
+
+  output_deb = add(deb, name_deb, add_deb)
+  output_downloads = add(downloads, name_downloads, add_downloads)
+  output_files = add(files, name_files, add_files)
+  output_flatpak = add(flatpak, name_flatpak, add_flatpak)
+  output_pip = add(pip, name_pip, add_pip)
+  output_startup = add(startup, name_startup)
 
   write_yaml_file(create_filename(name_deb), output_deb)
   write_yaml_file(create_filename(name_downloads), output_downloads)
   write_yaml_file(create_filename(name_files), output_files)
   write_yaml_file(create_filename(name_flatpak), output_flatpak)
   write_yaml_file(create_filename(name_pip), output_pip)
+  write_yaml_file(create_filename(name_startup), output_startup)
 
 if __name__ == "__main__":
     # execute only if run as a script
