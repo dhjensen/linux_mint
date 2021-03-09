@@ -5,3 +5,4 @@ alternatives:
   variable: EDITOR
 - name: pinentry
   path: /usr/bin/pinentry-gtk-2
+...
