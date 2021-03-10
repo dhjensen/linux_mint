@@ -55,13 +55,13 @@ def main():
     # Content to add
     # pylint: disable=line-too-long
     add_deb = [
-        'https://github.com/BoostIO/BoostNote.next/releases/download/v0.13.2/boost-note-linux.deb',
+        'https://github.com/BoostIO/BoostNote.next/releases/download/v0.14.1/boost-note-linux.deb',
         'https://github.com/bitwarden/desktop/releases/download/v1.24.6/Bitwarden-1.24.6-amd64.deb',
         'https://download.teamviewer.com/download/linux/teamviewer_amd64.deb'
     ]
     add_downloads = [
         {
-            'url': 'https://github.com/bitwarden/cli/releases/download/v1.13.3/bw-linux-1.13.3.zip',
+            'url': 'https://github.com/bitwarden/cli/releases/download/v1.14.0/bw-linux-1.14.0.zip',
             'destination': 'bw',
             'skip_tree': False
         }

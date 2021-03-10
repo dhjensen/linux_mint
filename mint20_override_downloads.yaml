@@ -18,7 +18,7 @@ downloads:
 - url: https://github.com/FairwindsOps/polaris/releases/download/3.1.5/polaris_3.1.5_linux_amd64.tar.gz
   destination: polaris
   skip_tree: false
-- url: https://github.com/bitwarden/cli/releases/download/v1.13.3/bw-linux-1.13.3.zip
+- url: https://github.com/bitwarden/cli/releases/download/v1.14.0/bw-linux-1.14.0.zip
   destination: bw
   skip_tree: false
 ...
