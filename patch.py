@@ -4,6 +4,7 @@ This module create overrides yaml files
 
 import yaml
 
+
 def add(content, name, items=None):
     '''
     Content to add in overrides
@@ -17,6 +18,7 @@ def add(content, name, items=None):
 
     return return_content
 
+
 def remove(target, remove_items):
     '''
     Remove unwanted items from the list
@@ -26,6 +28,7 @@ def remove(target, remove_items):
 
     return target
 
+
 def create_filename(name):
     '''
     Creates output filenames
@@ -33,12 +36,20 @@ def create_filename(name):
     filename = 'mint20_override_' + name + '.yaml'
     return filename
 
+
 def write_yaml_file(filename, output):
     '''
     Write yaml content to disk
     '''
     with open(filename, 'w') as file:
-        yaml.dump(output, file, explicit_start=True, explicit_end=True, sort_keys=False)
+        yaml.dump(
+            output,
+            file,
+            explicit_start=True,
+            explicit_end=True,
+            sort_keys=False
+        )
+
 
 def main():
     '''
@@ -53,7 +64,6 @@ def main():
     name_startup = 'startup'
 
     # Content to add
-    # pylint: disable=line-too-long
     add_deb = [
         'https://github.com/BoostIO/BoostNote.next/releases/download/v0.14.1/boost-note-linux.deb',
         'https://github.com/bitwarden/desktop/releases/download/v1.24.6/Bitwarden-1.24.6-amd64.deb',
@@ -68,14 +78,14 @@ def main():
     ]
     add_files = [
         {
-        'url': 'https://github.com/ytmdesktop/ytmdesktop/releases/download/v1.12.1/YouTube.Music.Desktop.App-1.12.1.AppImage',
-        'destination': 'youtubemusic',
-        'desktop_file': './files/apps/youtubemusic/youtubemusic.desktop'
+            'url': 'https://github.com/ytmdesktop/ytmdesktop/releases/download/v1.12.1/YouTube.Music.Desktop.App-1.12.1.AppImage',
+            'destination': 'youtubemusic',
+            'desktop_file': './files/apps/youtubemusic/youtubemusic.desktop'
         },
         {
-        'url': 'https://developers.yubico.com/yubikey-manager-qt/Releases/yubikey-manager-qt-1.1.5-linux.AppImage',
-        'destination': 'yubikeymanager',
-        'desktop_file': './files/apps/yubikeymanager/yubikeymanager.desktop'
+            'url': 'https://developers.yubico.com/yubikey-manager-qt/Releases/yubikey-manager-qt-1.1.5-linux.AppImage',
+            'destination': 'yubikeymanager',
+            'desktop_file': './files/apps/yubikeymanager/yubikeymanager.desktop'
         }
     ]
     add_flatpak = [
@@ -84,9 +94,9 @@ def main():
         {'name': 'https://flathub.org/repo/appstream/us.zoom.Zoom.flatpakref'}
     ]
     add_pip = [
-        'pylint'
+        'pylint',
+        'pycodestyle'
     ]
-    # pylint: enable=line-too-long
 
     # Content to remove in overrides
     remove_startup = [
@@ -102,24 +112,31 @@ def main():
     # Remove startup content before creating output.
     remove(content['startup'], remove_startup)
 
-    write_yaml_file(create_filename(name_deb),
+    write_yaml_file(
+        create_filename(name_deb),
         add(content['deb'], name_deb, add_deb)
     )
-    write_yaml_file(create_filename(name_downloads),
+    write_yaml_file(
+        create_filename(name_downloads),
         add(content['downloads'], name_downloads, add_downloads)
     )
-    write_yaml_file(create_filename(name_files),
+    write_yaml_file(
+        create_filename(name_files),
         add(content['files'], name_files, add_files)
     )
-    write_yaml_file(create_filename(name_flatpak),
+    write_yaml_file(
+        create_filename(name_flatpak),
         add(content['flatpak'], name_flatpak, add_flatpak)
     )
-    write_yaml_file(create_filename(name_pip),
+    write_yaml_file(
+        create_filename(name_pip),
         add(content['pip'], name_pip, add_pip)
     )
-    write_yaml_file(create_filename(name_startup),
+    write_yaml_file(
+        create_filename(name_startup),
         add(content['startup'], name_startup)
     )
+
 
 if __name__ == "__main__":
     # execute only if run as a script
