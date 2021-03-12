@@ -84,7 +84,8 @@ def main():
         {'name': 'https://flathub.org/repo/appstream/us.zoom.Zoom.flatpakref'}
     ]
     add_pip = [
-        'pylint'
+        'pylint',
+        'pycodestyle'
     ]
     # pylint: enable=line-too-long
 

@@ -13,4 +13,5 @@ pip:
 - gittyleaks
 - kube-hunter
 - pylint
+- pycodestyle
 ...
