@@ -1,6 +1,6 @@
 ---
 - name: Import_prepare_mint_desktop
-  hosts: all
+  hosts: mint
 
 - name: Import
   import_playbook: linux_mint.yaml
