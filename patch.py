@@ -61,7 +61,7 @@ def main():
     ]
     add_downloads = [
         {
-            'url': 'https://github.com/bitwarden/cli/releases/download/v1.14.0/bw-linux-1.14.0.zip',
+            'url': 'https://github.com/bitwarden/cli/releases/download/v1.15.0/bw-linux-1.15.0.zip',
             'destination': 'bw',
             'skip_tree': False
         }

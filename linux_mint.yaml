@@ -3,7 +3,7 @@
 # sudo apt install openssh-server ntp;systemctl enable ssh && systemctl start ssh
 #
 - name: prepare_mint_desktop
-  hosts: all
+  hosts: mint
   vars:
     install_optional: true                    # should optional packages be installed?
     install_deb: true                         # should extra deb packages should be installed
